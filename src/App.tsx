@@ -3,9 +3,9 @@
 // import viteLogo from '/vite.svg'
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 // import NavBar from './components/NavBar'
-import MainLayout from "./Layout/MainLayout";
+// import MainLayout from "./Layout/MainLayout";
 import Home from "./pages/Home";
 import { Product } from "./pages/ProductInfo";
 import { CartProvider } from "./context/CartContext";

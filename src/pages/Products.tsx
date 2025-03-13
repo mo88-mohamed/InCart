@@ -7,11 +7,11 @@ import useFilter from "../hooks/useFilter";
 const Proudcts = () => {
   const [data, setData] = useState<IProducts[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+//   const [error, setError] = useState<string | null>(null);
   const [Categories,setCategories] = useState<ICategory[]>([])
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 12;
-  const {searchQuery, setSearchQuery, category, setCategory} = useFilter();
+  const {searchQuery, category, setCategory} = useFilter();
 
 
   function filterUrl() {
@@ -27,13 +27,13 @@ const Proudcts = () => {
   const fetchCategories = async ()=> {
     try {
       setLoading(true);
-      setError(null);
+    //   setError(null);
       const response = await fetch("https://api.escuelajs.co/api/v1/categories");
       if (!response.ok) throw new Error("Failed to fetch products");
       const products = await response.json();
       setCategories(products);
     } catch (err) {
-      setError(err instanceof Error? err.message : "Something went wrong");
+    //   setError(err instanceof Error? err.message : "Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -43,7 +43,7 @@ const Proudcts = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        setError(null);
+        // setError(null);
         const offset = (currentPage - 1) * itemsPerPage;
         const url = `https://api.escuelajs.co/api/v1/products?offset=${offset}${filterUrl()}&limit=${itemsPerPage}`
         console.log(url);
@@ -52,7 +52,7 @@ const Proudcts = () => {
         const products = await response.json();
         setData(products);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Something went wrong");
+        // setError(err instanceof Error ? err.message : "Something went wrong");
       } finally {
         setLoading(false);
       }
@@ -105,7 +105,7 @@ const Proudcts = () => {
           >
             <option value={""}>All Categories</option>
             {
-                Categories && Categories.map((category,index)=><option key={category.name} value={category.slug}>{category.name}</option>)
+                Categories && Categories.map((category)=><option key={category.name} value={category.slug}>{category.name}</option>)
             }
             
             {/* <option value="">All Categories</option>

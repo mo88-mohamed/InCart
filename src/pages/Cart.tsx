@@ -2,7 +2,7 @@ import useCart from "../hooks/useCart"
 import MainLayout from "../Layout/MainLayout"
 
 const Cart = () => {
-    const {addToCart,removeFromCart,cartItems,decreaseQuantity} = useCart();
+    const {addToCart,cartItems,decreaseQuantity} = useCart();
     return(
         <MainLayout>
             <div className="container mx-auto px-4 py-8">

@@ -1,4 +1,4 @@
-import { IProducts } from './../pages/Home';
+// import { IProducts } from './../pages/Home';
 
 export const navLinks = [
     {

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/in-cart-logo.png";
 import { navLinks } from "./navLinks";
-import { FaOpencart } from "react-icons/fa6";
+// import { FaOpencart } from "react-icons/fa6";
 import { MdShoppingCart } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
@@ -14,7 +14,7 @@ import { useState } from "react";
 const NavBar = () => {
   const {getItemsCount} = useCart();
   const [innerSearchQuery,setInnerSearchQuery] = useState('');
-  const {searchQuery,setSearchQuery} = useFilter();
+  const {setSearchQuery} = useFilter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const navigate = useNavigate();
   return (

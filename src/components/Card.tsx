@@ -16,7 +16,6 @@ export const Card = ({
   discription,
   price,
   imgurl,
-  ...rest
 }: Props) => {
   const navigate = useNavigate();
   const {addToCart} = useCart();

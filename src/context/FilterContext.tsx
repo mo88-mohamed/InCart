@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, useState } from "react";
+import { createContext, useState } from "react";
 
 export interface IFilter {
   searchQuery: string;

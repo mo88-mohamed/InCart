@@ -8,8 +8,8 @@ import { useParams } from "react-router-dom";
 export const Product = () => {
     const {id} = useParams() 
     const [data,setData] = useState<IProducts>()
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null); 
+    // const [loading, setLoading] = useState<boolean>(true);
+    // const [error, setError] = useState<string | null>(null); 
 
     const [itemsCount,setItemsCount] = useState<number>(1);
     const [mainImage,setMainImage] = useState<string | undefined>(data?.images[0]);
@@ -17,8 +17,8 @@ export const Product = () => {
          
         const fetchProducts = async () => {
             try {
-              setLoading(true);
-              setError(null);
+              // setLoading(true);
+              // setError(null);
               const response = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`);
               if (!response.ok) throw new Error("Failed to fetch products");
               const products : IProducts = await response.json();
@@ -26,9 +26,9 @@ export const Product = () => {
               setData(products);
               setMainImage(products.images[0])
             } catch (err) {
-              setError(err instanceof Error ? err.message : "Something went wrong");
+              // setError(err instanceof Error ? err.message : "Something went wrong");
             } finally {
-              setLoading(false);
+              // setLoading(false);
             }
           };
           fetchProducts();
@@ -46,7 +46,7 @@ export const Product = () => {
             />
           </div>
           <div className="flex items-center justify-center gap-3 flex-wrap">
-            {data?.images.filter((image,index)=>image !== mainImage).map((variant, index) => (
+            {data?.images.filter((image)=>image !== mainImage).map((variant) => (
               <button
                 key={`${variant}`}
                 className="w-20 h-20 rounded-xl cursor-pointer bg-gray-50 p-2 hover:bg-gray-100 transition-all duration-300 ring-2 ring-transparent hover:ring-blue-200 focus:ring-blue-500 focus:outline-none hover:shadow-lg hover:-translate-y-1"
