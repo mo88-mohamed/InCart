@@ -1,11 +1,5 @@
 # InCart
- 
-Of course!  
-Here's a **professional README.md** you can use for the [InCart](https://github.com/mo88-mohamed/InCart) project:
 
----
-
-# InCart
 
 InCart is a modern, fast, and lightweight web application built with **Vite**, **TypeScript**, and **CSS**.  
 It aims to provide a highly responsive, scalable, and modular e-commerce frontend experience.
@@ -88,7 +82,7 @@ The app should now be running at [http://localhost:5173](http://localhost:5173)!
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://react.dev/) (Assumed if using JSX/TSX)
-- [CSS Modules](https://github.com/css-modules/css-modules)
+
 
 ---
 
@@ -121,5 +115,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Would you also like me to create a smaller, minimal version for you (for a "cleaner" README)? 🚀  
-Or maybe a **version with images**, badges (like "Vite ⚡", "TypeScript 💙") for a more professional GitHub look? 🎨
+
